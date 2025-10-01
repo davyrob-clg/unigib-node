@@ -5,10 +5,12 @@ const myConnection = require("express-myconnection");
 const path = require('path');
 const app = express();
 require('dotenv').config();
+
 // learning pull request
 // To get the database password from the .env file
 const DB_PASS = process.env.DB_PASSWORD;
 const DB_USERNAME = process.env.DB_USERNAME;
+const DB_DATABASE = process.env.DB_DATABASE;
 
 // Importing routes
 const customerRoutes = require('./routes/customer');
@@ -22,10 +24,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
     host: 'localhost',
-    user: 'crud',
-    password: PASS,
+    user: DB_USERNAME,
+    password: DB_PASS,
     port: '3306',
-    database: 'crud_operations'
+    database: DB_DATABASE
 }, 'single'));
 app.use(express.urlencoded({extended: false}));
 

@@ -1,7 +1,7 @@
 -- creating the database
-CREATE DATABASE crudnodejsmysql;
+CREATE DATABASE gibfly;
 
-use crudnodejsmysql;
+use gibfly;
 
 -- creating a table
 CREATE TABLE customer (
