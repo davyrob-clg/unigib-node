@@ -74,7 +74,7 @@ CREATE USER 'unigib'@'%' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
 Run the application:
 
 ```shell
-npm start
+npm run dev
 ```
 
 ## Usage
